@@ -111,7 +111,8 @@ def zufallszahlen_bis():
     if c <= mana:
         # Timer starten beim ersten Mal
         timer_starten()
-        
+        print("\n"*2)
+
         x = input(str(a) + " + " + str(b) + " = ")
         c = str(c)  # Ensure c is a string for comparison
 
@@ -125,6 +126,7 @@ def zufallszahlen_bis():
             print("Falsch! ✗ Die richtige Antwort war: " + str(c))
             leben -= 1
             leben_anzeigen()
+            time.sleep(2.5)
             if leben <= 0:
                 print("Game Over! Du hast keine Leben mehr.")
                 print("Deine Gesamtpunkte: " + str(punkte) + " in Zeit: " + vergangene_zeit_anzeigen())
